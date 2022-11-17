@@ -37,7 +37,6 @@ alias lofi='mpv --volume=50 --no-video "https://youtu.be/5qap5aO4i9A"'
 
 alias ug='cd ~/Media/Escuela/11vo\ Semestre/'
 alias ugTes='cd ~/Media/Escuela/Tesis && source ./tesis/bin/activate'
-alias feliS='find /home/adriz/Media/Images/.OhNo/TODO/ | grep -v -i -E ".(mp4)" | sort -R | nsxiv -i -abf -s f -S 5'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
