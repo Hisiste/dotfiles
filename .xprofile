@@ -1,0 +1,7 @@
+/usr/bin/dwmstatus 2>&1 >/dev/null &
+
+nitrogen --restore &
+
+picom -f &
+
+redshift -l 19.51194:-98.88277 &
