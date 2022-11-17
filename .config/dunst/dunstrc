@@ -1,3 +1,5 @@
+# See dunst(5) for all configuration options
+
 [global]
     ### Display ###
 
@@ -31,7 +33,25 @@
     # screen width minus the width defined in within the geometry option.
     geometry = "300x5-30+20"
 
-    # Turn on the progess bar
+    # The maximum height of a single notification, excluding the frame.
+    height = 300
+
+    # Position the notification in the top right corner
+    origin = top-right
+
+    # Offset from the origin
+    offset = 10x50
+
+    # Scale factor. It is auto-detected if value is 0.
+    scale = 0
+
+    # Maximum number of notification (0 means no limit)
+    notification_limit = 10
+
+    ### Progress bar ###
+
+    # Turn on the progess bar. It appears when a progress hint is passed with
+    # for example dunstify -h int:value:12
     progress_bar = true
 
     # Set the progress bar height. This includes the frame, so make sure
@@ -85,6 +105,7 @@
 
     # Defines color of the frame around the notification window.
     frame_color = "#aaaaaa"
+    highlight = "#ffffff"
 
     # Define a color for the separator.
     # possible values are:
@@ -212,7 +233,7 @@
     dmenu = /usr/local/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/brave -new-tab
+    browser = /usr/bin/xdg-open
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -242,7 +263,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 20
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -277,10 +298,14 @@
     # Defines list of actions for each mouse event
     # Possible values are:
     # * none: Don't do anything.
-    # * do_action: If the notification has exactly one action, or one is marked as default,
-    #              invoke it. If there are multiple and no default, open the context menu.
+    # * do_action: Invoke the action determined by the action_name rule. If there is no
+    #              such action, open the context menu.
+    # * open_url: If the notification has exactly one url, open it. If there are multiple
+    #             ones, open the context menu.
     # * close_current: Close current notification.
     # * close_all: Close all notifications.
+    # * context: Open context menu for the notification.
+    # * context_all: Open context menu for all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
     mouse_left_click = do_action, close_current
