@@ -21,10 +21,6 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 
-# Ranger text editor
-export VISUAL=nvim
-export EDITOR=nvim
-
 # PURE
 autoload -U promptinit; promptinit
 prompt pure
@@ -33,12 +29,18 @@ prompt pure
 alias ls='ls --color=auto'
 alias r='ranger'
 alias pass='apg -a 1 -n 1 -m 50 -x 80 -M SNCL -d | xclip -selection clipboard'
-alias lofi='mpv --volume=50 --no-video "https://youtu.be/5qap5aO4i9A"'
+alias lofi='mpv --volume=50 --no-video "https://youtu.be/jfKfPfyJRdk"'
+alias caravan='mpv --volume=50 $HOME/Music/Caravan\ Palace\ -\ Chill\ with\ Caravan\ Palace\ \(One\ Hour\ Mix\).webm'
+alias cht='~/.personalSH/cht.sh'
 
 alias ug='cd ~/Media/Escuela/11vo\ Semestre/'
 alias ugTes='cd ~/Media/Escuela/Tesis && source ./tesis/bin/activate'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# RANGER EDITOR
+export VISUAL=nvim
+export EDITOR=nvim
 
 # Time format
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*Us\nsystem\t%*Ss\ntotal\t%*Es'
