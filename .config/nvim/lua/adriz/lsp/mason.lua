@@ -5,7 +5,8 @@ local servers = {
     "texlab", -- LaTeX
 	"sumneko_lua", -- LUA
     "marksman", -- Markdown
-	"pyright", -- Python
+	-- "pyright", -- Python
+	"pylsp", -- Python
 }
 
 local settings = {
@@ -49,3 +50,22 @@ for _, server in pairs(servers) do
 
 	lspconfig[server].setup(opts)
 end
+
+
+require'lspconfig'.pylsp.setup{
+  settings = {
+    pylsp = {
+      plugins = {
+        pydocstyle = {
+          enabled = true
+        },
+        pycodestyle = {
+            maxLineLength = 80
+        },
+        pylint = {
+            enabled = true
+        }
+      }
+    }
+  }
+}
