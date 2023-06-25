@@ -3,7 +3,7 @@ local servers = {
     "clangd", -- C/C++
 	"jsonls", -- JSON
     "texlab", -- LaTeX
-	"sumneko_lua", -- LUA
+	"lua_ls", -- LUA
     "marksman", -- Markdown
 	-- "pyright", -- Python
 	"pylsp", -- Python
