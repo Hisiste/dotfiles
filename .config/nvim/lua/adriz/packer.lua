@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    -- Colorizer.lua
+    use 'NvChad/nvim-colorizer.lua'
+
     -- -- Lazy loading:
     -- -- Load on specific commands
     -- use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}
