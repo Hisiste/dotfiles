@@ -28,7 +28,7 @@ prompt pure
 # ALIAS
 alias ls='ls --color=auto'
 alias r='ranger'
-alias pass='apg -a 1 -n 1 -m 50 -x 80 -M SNCL -d | xclip -selection clipboard'
+alias passgen='apg -a 1 -n 1 -m 50 -x 80 -M SNCL -d | xclip -selection clipboard'
 alias lofi='mpv --volume=50 --no-video "https://youtu.be/jfKfPfyJRdk"'
 alias caravan='mpv --volume=50 $HOME/Music/Caravan\ Palace\ -\ Chill\ with\ Caravan\ Palace\ \(One\ Hour\ Mix\).webm'
 alias cht='~/.personalSH/cht.sh'
