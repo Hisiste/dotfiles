@@ -19,3 +19,4 @@ vim.opt.colorcolumn = '80'
 vim.opt.termguicolors = true
 
 vim.g.mapleader = ' '
+vim.g.python3_host_prog = "$HOME/Desktop/neovim/bin/python3"
