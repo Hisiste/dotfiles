@@ -33,9 +33,6 @@ alias lofi='mpv --volume=50 --no-video "https://youtu.be/jfKfPfyJRdk"'
 alias caravan='mpv --volume=50 $HOME/Music/Caravan\ Palace\ -\ Chill\ with\ Caravan\ Palace\ \(One\ Hour\ Mix\).webm'
 alias cht='~/.personalSH/cht.sh'
 
-alias ug='cd ~/Media/Escuela/11vo\ Semestre/'
-alias ugTes='cd ~/Media/Escuela/Tesis && source ./tesis/bin/activate'
-
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # RANGER EDITOR
@@ -46,5 +43,5 @@ export EDITOR=nvim
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*Us\nsystem\t%*Ss\ntotal\t%*Es'
 
 # PATH
-#PATH="/home/adriz/.local/bin:$PATH"
+PATH="/home/adriz/.cargo/bin:$PATH"
 
