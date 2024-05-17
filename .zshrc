@@ -25,6 +25,13 @@ bindkey -v
 autoload -U promptinit; promptinit
 prompt pure
 
+# SOURCE
+## https://github.com/wwalker/ssh-find-agent
+## """ssh-find-agent is a tool for locating existing ssh compatible agent
+##    processes (e.g., ssh-agent, gpg-agent, gnome-keyring, osx-keychain); and,
+##    optionally, setting SSH_AUTH_SOCK accordingly."""
+emulate ksh -c "source ~/.personalSH/ssh-find-agent/ssh-find-agent.sh" # zsh
+
 # ALIAS
 alias ls='ls --color=auto'
 alias r='ranger'
@@ -34,6 +41,9 @@ alias caravan='mpv --volume=50 $HOME/Music/Caravan\ Palace\ -\ Chill\ with\ Cara
 alias cht='~/.personalSH/cht.sh'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# ssh-find-agent - Automatically choose the first ssh-agent.
+ssh-add -l >&/dev/null || ssh-find-agent -a || eval $(ssh-agent) > /dev/null
 
 # RANGER EDITOR
 export VISUAL=nvim
